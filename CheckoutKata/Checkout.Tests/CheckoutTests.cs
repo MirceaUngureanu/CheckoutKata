@@ -10,7 +10,7 @@ namespace Checkout.Tests
         {
             Checkout c = new Checkout();
             c.Scan("");
-            Assert.AreEqual(0, c.Total);
+            Assert.AreEqual(0, c.getTotal());
         }
 
         [TestMethod]
@@ -18,7 +18,7 @@ namespace Checkout.Tests
         {
             Checkout c = new Checkout();
             c.Scan("A");
-            Assert.AreEqual(50, c.Total);
+            Assert.AreEqual(50, c.getTotal());
         }
     }
 }
