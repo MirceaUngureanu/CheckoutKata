@@ -25,9 +25,13 @@ namespace Checkout
             scanner = new Scanner(pricingRules);
         }
 
-        public int getTotal()
+        public int GetTotal()
         {
             // check discount rules
+            // check scanned items (store a string)
+            // see which discount rules apply
+            // sum up discount
+            // total - discount
             return total;
         }
 

@@ -10,7 +10,7 @@ namespace Checkout.Tests
         {
             Checkout c = new Checkout();
             c.ScanItems("");
-            Assert.AreEqual(0, c.getTotal());
+            Assert.AreEqual(0, c.GetTotal());
         }
 
         [TestMethod]
@@ -22,7 +22,7 @@ namespace Checkout.Tests
         {
             Checkout c = new Checkout();
             c.ScanItem(item);
-            Assert.AreEqual(expected, c.getTotal());
+            Assert.AreEqual(expected, c.GetTotal());
         }
 
         [TestMethod]
@@ -32,7 +32,7 @@ namespace Checkout.Tests
         {
             Checkout c = new Checkout();
             c.ScanItems(items);
-            Assert.AreEqual(expected, c.getTotal());
+            Assert.AreEqual(expected, c.GetTotal());
         }
 
         [TestMethod]
@@ -42,7 +42,7 @@ namespace Checkout.Tests
         {
             Checkout c = new Checkout();
             c.ScanItems(items);
-            Assert.AreEqual(expected, c.getTotal());
+            Assert.AreEqual(expected, c.GetTotal());
         }
 
 
@@ -53,7 +53,7 @@ namespace Checkout.Tests
             Checkout c = new Checkout();
             c.ApplyDiscountRules(3, 130);
             c.ScanItems(items);
-            Assert.AreEqual(expected, c.getTotal());
+            Assert.AreEqual(expected, c.GetTotal());
         }
     }
 }
