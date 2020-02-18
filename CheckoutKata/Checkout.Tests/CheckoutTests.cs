@@ -12,5 +12,13 @@ namespace Checkout.Tests
             c.Scan("");
             Assert.AreEqual(0, c.Total);
         }
+
+        [TestMethod]
+        public void Checkout_ScanningOneItem_GivesCorrectPrice()
+        {
+            Checkout c = new Checkout();
+            c.Scan("A");
+            Assert.AreEqual(50, c.Total);
+        }
     }
 }
