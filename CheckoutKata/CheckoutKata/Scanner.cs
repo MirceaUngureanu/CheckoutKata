@@ -9,32 +9,15 @@ namespace Checkout
     public class Scanner
     {
         private Dictionary<char, int> pricingRules;
-        private int total;
 
-        public Scanner(Dictionary<char, int> _pricingRules, ref int total)
+        public Scanner(Dictionary<char, int> _pricingRules)
         {
             pricingRules = _pricingRules;
         }
 
-        public void Scan(char item)
+        public int ScanItem(char item)
         {
-            total = pricingRules[item];
-        }
-
-        public void Scan(string items)
-        {
-            if (items == "")
-            {
-                total = 0;
-            }
-            else
-            {
-                foreach (char item in items)
-                {
-                    total += pricingRules[item];
-                }
-            }
-
+            return pricingRules[item];
         }
     }
 }

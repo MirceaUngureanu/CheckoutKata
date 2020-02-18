@@ -20,12 +20,32 @@ namespace Checkout
 
         public Checkout()
         {
-            scanner = new Scanner(pricingRules, ref total);
+            scanner = new Scanner(pricingRules);
         }
 
         public int getTotal()
         {
             return total;
+        }
+
+        public void ScanItem(char item)
+        {
+            total = scanner.ScanItem(item);
+        }
+
+        public void ScanItems(string items)
+        {
+            if (items == "")
+            {
+                total = 0;
+            }
+            else
+            {
+                foreach (char item in items)
+                {
+                    total += scanner.ScanItem(item);
+                }
+            }
         }
 
     }
