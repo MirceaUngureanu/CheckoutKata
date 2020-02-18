@@ -9,7 +9,7 @@ namespace Checkout.Tests
         public void Checkout_ScanningNoItems_GivesZero()
         {
             Checkout c = new Checkout();
-            c.Scan('');
+            c.Scan("");
             Assert.AreEqual(0, c.getTotal());
         }
 

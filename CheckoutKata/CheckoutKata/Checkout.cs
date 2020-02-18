@@ -24,13 +24,20 @@ namespace Checkout
 
         public void Scan(char item)
         {
+            total = pricingRules[item];
+        }
+
+        public void Scan(string item)
+        {
             if (item == "")
             {
                 total = 0;
-            } else
-            {
-                total = pricingRules[item];
             }
+            else
+            {
+                total = pricingRules[item[0]];
+            }
+
         }
     }
 }
