@@ -9,16 +9,16 @@ namespace Checkout.Tests
         public void Checkout_ScanningNoItems_GivesZero()
         {
             Checkout c = new Checkout();
-            c.Scan("");
+            c.Scan('');
             Assert.AreEqual(0, c.getTotal());
         }
 
         [TestMethod]
-        [DataRow("A", 50)]
-        [DataRow("B", 30)]
-        [DataRow("C", 20)]
-        [DataRow("D", 10)]
-        public void Checkout_ScanningOneItem_GivesCorrectPrice(string items, int expected)
+        [DataRow('A', 50)]
+        [DataRow('B', 30)]
+        [DataRow('C', 20)]
+        [DataRow('D', 10)]
+        public void Checkout_ScanningOneItem_GivesCorrectPrice(char item, int expected)
         {
             Checkout c = new Checkout();
             c.Scan(items);
