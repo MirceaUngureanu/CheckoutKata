@@ -51,6 +51,7 @@ namespace Checkout.Tests
         public void Checkout_DiscountOfThreeAs(string items, int expected)
         {
             Checkout c = new Checkout();
+            c.ApplyDiscountRules(3, 130);
             c.ScanItems(items);
             Assert.AreEqual(expected, c.getTotal());
         }
