@@ -9,23 +9,25 @@ namespace Checkout
     public class Checkout
     {
         private int total = 0;
+        private Dictionary<string, int> pricingRules = new Dictionary<string, int>()
+        {
+            { "A", 50 },
+            { "B", 30 }
+        };
 
         public int getTotal()
         {
             return total;
         }
 
-        public void Scan(string items)
+        public void Scan(string item)
         {
-            if (items == "")
+            if (item == "")
             {
                 total = 0;
-            } else if (items == "A")
-            {
-                total = 50;
             } else
             {
-                total = 30;
+                total = pricingRules[item];
             }
         }
     }
