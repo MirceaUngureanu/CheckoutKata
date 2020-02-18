@@ -35,7 +35,7 @@ namespace Checkout
             }
             else
             {
-                total = pricingRules[item[0]];
+                total += pricingRules[item[0]];
             }
 
         }
