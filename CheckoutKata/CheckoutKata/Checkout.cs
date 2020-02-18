@@ -27,15 +27,18 @@ namespace Checkout
             total = pricingRules[item];
         }
 
-        public void Scan(string item)
+        public void Scan(string items)
         {
-            if (item == "")
+            if (items == "")
             {
                 total = 0;
             }
             else
             {
-                total += pricingRules[item[0]];
+                foreach(char item in items)
+                {
+                    total += pricingRules[item];
+                }
             }
 
         }
