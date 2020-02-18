@@ -14,11 +14,13 @@ namespace Checkout.Tests
         }
 
         [TestMethod]
-        public void Checkout_ScanningOneItem_GivesCorrectPrice()
+        [DataRow("A", 50)]
+        [DataRow("B", 30)]
+        public void Checkout_ScanningOneItem_GivesCorrectPrice(string items, int expected)
         {
             Checkout c = new Checkout();
-            c.Scan("A");
-            Assert.AreEqual(50, c.getTotal());
+            c.Scan(items);
+            Assert.AreEqual(expected, c.getTotal());
         }
     }
 }
