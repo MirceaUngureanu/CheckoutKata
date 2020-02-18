@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Checkout
 {
-    public class Class1
+    public class Checkout
     {
+        public int Total = 0;
+
+        public void Scan(string items)
+        {
+
+        }
     }
 }

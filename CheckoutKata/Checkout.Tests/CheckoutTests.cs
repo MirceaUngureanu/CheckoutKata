@@ -10,7 +10,7 @@ namespace Checkout.Tests
         {
             Checkout c = new Checkout();
             c.Scan("");
-            Assert.Equals(0, c.Total);
+            Assert.AreEqual(0, c.Total);
         }
     }
 }
