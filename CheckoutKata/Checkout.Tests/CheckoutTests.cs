@@ -16,6 +16,8 @@ namespace Checkout.Tests
         [TestMethod]
         [DataRow("A", 50)]
         [DataRow("B", 30)]
+        [DataRow("C", 20)]
+        [DataRow("D", 10)]
         public void Checkout_ScanningOneItem_GivesCorrectPrice(string items, int expected)
         {
             Checkout c = new Checkout();
