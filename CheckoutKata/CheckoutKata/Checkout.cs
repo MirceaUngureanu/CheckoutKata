@@ -20,9 +20,12 @@ namespace Checkout
             if (items == "")
             {
                 total = 0;
-            } else
+            } else if (items == "A")
             {
                 total = 50;
+            } else
+            {
+                total = 30;
             }
         }
     }
