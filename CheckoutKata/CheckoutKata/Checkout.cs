@@ -12,7 +12,9 @@ namespace Checkout
         private Dictionary<string, int> pricingRules = new Dictionary<string, int>()
         {
             { "A", 50 },
-            { "B", 30 }
+            { "B", 30 },
+            { "C", 20 },
+            { "D", 10 }
         };
 
         public int getTotal()
