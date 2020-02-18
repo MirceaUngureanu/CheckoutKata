@@ -21,7 +21,7 @@ namespace Checkout.Tests
         public void Checkout_ScanningOneItem_GivesCorrectPrice(char item, int expected)
         {
             Checkout c = new Checkout();
-            c.Scan(items);
+            c.Scan(item);
             Assert.AreEqual(expected, c.getTotal());
         }
     }
