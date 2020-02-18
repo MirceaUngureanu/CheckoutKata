@@ -12,7 +12,13 @@ namespace Checkout
 
         public void Scan(string items)
         {
-
+            if (items == "")
+            {
+                Total = 0;
+            } else
+            {
+                Total = 50;
+            }
         }
     }
 }
