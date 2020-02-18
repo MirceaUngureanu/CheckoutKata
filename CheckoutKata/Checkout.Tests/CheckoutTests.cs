@@ -9,7 +9,7 @@ namespace Checkout.Tests
         public void Checkout_ScanningNoItems_GivesZero()
         {
             Checkout c = new Checkout();
-            c.Scan("");
+            c.scanner.Scan("");
             Assert.AreEqual(0, c.getTotal());
         }
 
@@ -21,7 +21,7 @@ namespace Checkout.Tests
         public void Checkout_ScanningOneItem_GivesCorrectPrice(char item, int expected)
         {
             Checkout c = new Checkout();
-            c.Scan(item);
+            c.scanner.Scan(item);
             Assert.AreEqual(expected, c.getTotal());
         }
 
@@ -31,7 +31,7 @@ namespace Checkout.Tests
         public void Checkout_ScanningMultipleOfSameItem_GivesCorrectPrice(string items, int expected)
         {
             Checkout c = new Checkout();
-            c.Scan(items);
+            c.scanner.Scan(items);
             Assert.AreEqual(expected, c.getTotal());
         }
 
@@ -41,7 +41,7 @@ namespace Checkout.Tests
         public void Checkout_ScanningMultipleOfDifferentItem_GivesCorrectPrice(string items, int expected)
         {
             Checkout c = new Checkout();
-            c.Scan(items);
+            c.scanner.Scan(items);
             Assert.AreEqual(expected, c.getTotal());
         }
     }
