@@ -34,5 +34,15 @@ namespace Checkout.Tests
             c.Scan(items);
             Assert.AreEqual(expected, c.getTotal());
         }
+
+        [TestMethod]
+        [DataRow("AB", 80)]
+        [DataRow("ABCD", 110)]
+        public void Checkout_ScanningMultipleOfDifferentItem_GivesCorrectPrice(string items, int expected)
+        {
+            Checkout c = new Checkout();
+            c.Scan(items);
+            Assert.AreEqual(expected, c.getTotal());
+        }
     }
 }
