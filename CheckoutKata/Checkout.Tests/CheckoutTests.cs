@@ -44,5 +44,15 @@ namespace Checkout.Tests
             c.ScanItems(items);
             Assert.AreEqual(expected, c.getTotal());
         }
+
+
+        [TestMethod]
+        [DataRow("AAA", 130)]
+        public void Checkout_DiscountOfThreeAs(string items, int expected)
+        {
+            Checkout c = new Checkout();
+            c.ScanItems(items);
+            Assert.AreEqual(expected, c.getTotal());
+        }
     }
 }
