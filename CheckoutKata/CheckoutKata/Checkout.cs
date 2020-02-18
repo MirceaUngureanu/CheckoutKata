@@ -9,6 +9,8 @@ namespace Checkout
     public class Checkout
     {
         private int total = 0;
+        private int discountQuantity;
+        private int discountTotal;
         private Dictionary<char, int> pricingRules = new Dictionary<char, int>()
         {
             { 'A', 50 },
@@ -25,6 +27,7 @@ namespace Checkout
 
         public int getTotal()
         {
+            // check discount rules
             return total;
         }
 
@@ -46,6 +49,12 @@ namespace Checkout
                     total += scanner.ScanItem(item);
                 }
             }
+        }
+
+        public void ApplyDiscountRules(int quantity, int total)
+        {
+            discountQuantity = quantity;
+            discountTotal = total;
         }
 
     }
